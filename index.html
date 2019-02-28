@@ -181,8 +181,8 @@ height: 110px;
           to be held in Auckland in late October 2019, hosts an annual challenge that aims to promote the use of innovative and new approaches to creation and use of the Semantic Web. This year’s challenge will focus on knowledge graphs. Both public and privately owned, knowledge graphs are currently among the most prominent implementations of Semantic Web technologies. This year’s challenge is centered on validation of factual information in a newly generated Knowledge graph. The challenge is divided into two tasks:
           </p>
           <ul>
-            <li class="text-justify"><strong>Fact Validation</strong>. Given a statement about an entity, e.g., the indication of a drug, participants are expected to provide an assessment about the correctness of the statement.</li>
-            <li class="text-justify"><strong>Fact Validation at Scale</strong>.
+            <li class="text-justify"><strong>Task One: Fact Validation</strong>. Given a statement about an entity, e.g., the indication of a drug, participants are expected to provide an assessment about the correctness of the statement.</li>
+            <li class="text-justify"><strong>Task Two: Fact Validation at Scale</strong>.
             In this task the participating systems will be evaluated for their scalability including runtime measurements and their ability to handle parallel requests.</li>
             </ul>
             <p class="card-text text-justify">
@@ -206,7 +206,7 @@ height: 110px;
           <h5 class="lead card-title text-left"><i class="fa fa-bullseye fa-lg" style="margin-right:8px"
               aria-hidden="true"></i>Tasks Descriptions</h5>
 
-          <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task One: Fact Validation</h6>
+          <h6 class="text-left" id="Task_One_Fact_Validation">Task One: Fact Validation</h6>
           <p class="card-text text-justify">
           The task is to validate triple statements i.e., to check if a given property holds for the subject and object entity. For this task, participants will create an algorithm that takes as input a given triple and returns a trust score. The challenge participants are expected to provide a trust score for each of the statements (i.e., a numerical value between 0 and 1), where 0 means that they are sure that the statement is false and 1 means that they are sure the statement is true. As mentioned above, to facilitate training, the participants will be provided with the training part of the dataset consisting of positive and negative statements. The positive and negative statements are labeled with trust scores 1 and 0, respectively. An example graph of an input triple in the training set is as follows:
           </p>
@@ -219,7 +219,7 @@ height: 110px;
 <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;</span></span> "0.0"^^&lt;<span class="xml"><span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">2001</span>/<span class="hljs-attribute">XMLSchema</span>#<span class="hljs-attribute">double</span>&gt;</span></span> .
 </code></pre>
 
-<p class="card-text text-justify"> Note that, the statements in the training set are labeled with trust scores 0 or 1 using the property &lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;. It is up to the participants to further split the training set into training and validation sets accordingly. The following properties will be used in scoring the challenge:</p>
+<p class="card-text text-justify"> Note that, the statements in the training set are labeled with trust scores 0 or 1 using the property &lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;. It is up to the participants to further split the training set into training and validation sets accordingly. The following properties will be used in scoring the systems:</p>
 <ul class="text-left">
   <li>http://dice-research.org/ontology/drugbank/interactsWith</li>
   <li>http://dice-research.org/ontology/drugbank/hasCommonIndication</li>
@@ -230,7 +230,7 @@ height: 110px;
 <p class="card-text text-justify">
     The domain and range information and the descriptions of the above mentioned properties will be made available with the training set.
     </p>
-  <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task Two: Fact Validation at Scale</h6>
+  <h6 class="text-left" id="Task_Two_Fact_Validation">Task Two: Fact Validation at Scale</h6>
   <p class="card-text text-justify">
   For the second task, the participants must ensure that their systems are scalable to handle large amount of input. The systems must be as fast as possible. The participants are expected to provide their implementations encapsulated in a docker container. Additionally, the system methods must me wrapped in a System Adapter. Detailed instructions on integrating the system can be found <a href="https://hobbit-project.github.io/system_integration.html" class="font-weight-bold" style="text-decoration:underline">here</a>.
   </p>
@@ -240,20 +240,27 @@ height: 110px;
       <div class="card p-1 border-0">
         <div class="card-body">
           <h4 class="lead card-title text-left"><i class="fa fa-chart-bar fa-lg" style="margin-right:8px" aria-hidden="true"></i>Evaluation</h4>
-          <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task One: Fact Validation</h6>
+          <h6 class="text-left">Task One: Fact Validation</h6>
           <p class="card-text text-left">
               For solution scoring, the test dataset containing positive and negative statements will be provided to the participants. The test inputs contains similar statements like the training input (refer <a href="#code-example" class="font-weight-bold" style="text-decoration:underline">example</a>), except the statement that indicate the trust score, which are only known to the dataset owners. The participants are expected to provide a file containing triple statements of scores, one for each input. For example, a system could return </p>
           <pre><code class="language-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;</span></span> "0.0"^^&lt;<span class="xml"><span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">2001</span>/<span class="hljs-attribute">XMLSchema</span>#<span class="hljs-attribute">double</span>&gt;</span></span> .
           </code></pre>
 
           <p class="card-text text-justify">The solutions will be scored by using the area under the ROC curve (AUC).</p>
+
+          <h6 class="text-left">Task Two: Fact Validation at Scale</h6>
+          <p class="card-text text-left">For the evaluation of task two, the participants must provide their implementations as described in the task description <a href="#Task_Two_Fact_Validation" class="font-weight-bold" style="text-decoration:underline">section</a>. The systems will be evaluated by using combination of AUC-ROC and runtime measurements.</p>. 
         </div>
       </div>
 
       <div class="card p-1 border-0">
         <div class="card-body">
           <h5 class="lead card-title text-left"><i class="fas fa-cogs fa-lg" style="margin-right:8px" aria-hidden="true"></i>Submission</h5>
+          <h6 class="text-left">Task One: Fact Validation</h6>
           <p class="card-text text-left">The participants can submit their system results via <a href="http://swc2017.aksw.org/gerbil/config" class="font-weight-bold" style="text-decoration:underline">Gerbil</a>. Note that, only submissions published to the leaderboard will be accepted as to the competition.
+          </p>
+          <h6 class="text-left">Task Two: Fact Validation at Scale</h6>
+          <p class="card-text text-left">Submissions for the task two can be done via the <a href="https://master.project-hobbit.eu/" class="font-weight-bold" style="text-decoration:underline">HOBBIT</a> platform.
           </p>
         </div>
       </div>
@@ -272,13 +279,14 @@ height: 110px;
           </div>
         </div>
 
-      <div class="card p-1 border-0">
+<!--      <div class="card p-1 border-0">
           <div class="card-body">
             <h5 class="lead card-title text-left"><i class="fa fa-gift fa-lg" style="margin-right:8px" aria-hidden="true"></i>Prize</h5>
             <p class="card-text text-left">The winning team of each task will receive 1000€. The sum will be shared amongst the winning teams if several teams are declared the winners.
             </p>
           </div>
         </div>
+      -->
 
         <div class="card p-1 border-0">
             <div class="card-body">
