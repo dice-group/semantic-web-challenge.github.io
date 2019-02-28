@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="PF6Vn6W3xL_WzJ-tobNlP0p4ggPLI-QOnMXPfLm7zqs" />
+
+  <title>Semantic Web Challenge</title>
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+  <style>
+    /*
+ * Globals
+ */
+
+ html {
+  font-size: 1.1rem;
+}
+
+pre {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+}
+code, pre {
+    padding: 3px 8px;
+    margin: 0 1px;
+    background: #eeeeee;
+    color: #222;
+    font-size: 0.9em;
+    font-family: Monospace, "Courier New", Courier;
+    overflow: auto;
+    line-height: 1.4em;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #424242;
+}
+
+i{
+  color: #387EBD
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #fff;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #0B4779;
+  border: 1px solid #0B4779;
+}
+
+
+
+
+html,
+body {
+  height: 100%;
+  background-color: #ffffff;
+  color: black;
+  text-align: center;
+}
+
+.navbar-brand {
+  margin-top:-5px;
+}
+
+.container {
+  padding-top:5px;
+}
+
+.wrapper{
+  height: 100vh;
+}
+
+
+#organizational{
+  margin-top: 10px;
+  background-color:#2E3439;
+  color: whitesmoke;
+}
+
+#persons{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5px;
+}
+
+.person{
+    flex: 0 1 125px;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    padding: 0px;
+   /* border: 1px solid #dee2e6; */
+}
+
+.person-name{
+  font-size: 12px;
+color: whitesmoke;
+font-weight: 350;
+}
+
+.affiliation{
+  margin-top: 0.0px;
+font-size: 10px;
+color: whitesmoke;
+}
+
+.person-info{
+width: 100%;
+text-align: left;
+padding-left: 5px;
+padding-right: 5px;
+margin-left: 12px;
+padding-top: 2px;
+height: 110px;
+}
+
+.person-info > p {
+  margin-bottom: 1.5rem !important;
+}
+
+#logos{
+  margin-top: 10px;
+  margin-left: 25px;
+  padding-bottom: 15px;
+  bottom: 0px;
+}
+
+
+</style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+      <nav class="navbar navbar-dark navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl justify-content-start">
+        <h1 style="text-align:right;color: #387EBD ;font-weight: bold; font-size: 2em; padding-top: 4px">Semantic Web Challenge 2019</h1>
+      </nav>
+    </div>
+    <!-- Cards-->
+    <div class="container col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" style="margin-bottom:6em">
+
+
+      <div class="card p-1">
+        <div class="card-body">
+          <h5 class="lead card-title text-left text-bold"><i class="fas fa-bullhorn fa-lg" style="margin-right:8px" aria-hidden="true"></i>Introduction</h5>
+          <p class="card-text text-justify">
+          The 
+          <a href="https://iswc2019.semanticweb.org/" class="font-weight-bold" style="text-decoration:underline">International Semantic Web Conference</a>,
+          to be held in Auckland in late October 2019, hosts an annual challenge that aims to promote the use of innovative and new approaches to creation and use of the Semantic Web. This year’s challenge will focus on knowledge graphs. Both public and privately owned, knowledge graphs are currently among the most prominent implementations of Semantic Web technologies. This year’s challenge is centered on validation of factual information in a newly generated Knowledge graph. The challenge is divided into two tasks:
+          </p>
+          <ul>
+            <li class="text-justify"><strong>Fact Validation</strong>. Given a statement about an entity, e.g., the indication of a drug, participants are expected to provide an assessment about the correctness of the statement.</li>
+            <li class="text-justify"><strong>Fact Validation at Scale</strong>.
+            In this task the participating systems will be evaluated for their scalability including runtime measurements and their ability to handle parallel requests.</li>
+            </ul>
+            <p class="card-text text-justify">
+              Participants may choose to participate in one or both tasks. For both tasks, users may use a portion of the knowledge graph for training. The participants can make use of structured and unstructured information from Internet sources for validating facts. The evaluation of participating systems will be carried out on the testing portion of the Knowledge Graph owned by the organizers of the challenge.
+              </p>
+        </div>
+      </div>
+
+      <div class="card p-1">
+        <div class="card-body">
+          <h5 class="lead card-title text-left"><i class="fa fa-database fa-lg" style="margin-right:8px"
+              aria-hidden="true"></i>Core Data Set</h5>
+          <p class="card-text text-justify">
+          The core dataset consists of a graph of entities (drugs, diseases and products) and information related to and linking these entities. The dataset is created by extracting information from a well known source and identifying links between entities. The identified links are used to create new properties and generate triple statements. The newly generated properties are well defined by both domain and range information and short descriptions. The dataset has a training and a testing part; the training part will be made available to the participants for building and training candidate systems. The testing part will be used for evaluation of participating systems. Both the training and testing parts are split into positive and negative statements. While the positive statements are generated by identifying the entities for which the proposed properties hold, the negative statements are generated by replacing the entities in the positive statements such that the generated triples are false or invalid. To generate facts that are challenging to be classified as false, we generate negative statements that are similar to the positive ones. To do this, we apply heuristics: for example, the domain and range information is not violated while generating the negative statements. Wherever possible, we apply string similarity metrics and select negative statements that are more similar to the positive statements.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-1">
+        <div class="card-body">
+          <h5 class="lead card-title text-left"><i class="fa fa-bullseye fa-lg" style="margin-right:8px"
+              aria-hidden="true"></i>Tasks Descriptions</h5>
+
+          <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task One: Fact Validation</h6>
+          <p class="card-text text-justify">
+          The task is to validate triple statements i.e., to check if a given property holds for the subject and object entity. For this task, participants will create an algorithm that takes as input a given triple and returns a trust score. The challenge participants are expected to provide a trust score for each of the statements (i.e., a numerical value between 0 and 1), where 0 means that they are sure that the statement is false and 1 means that they are sure the statement is true. As mentioned above, to facilitate training, the participants will be provided with the training part of the dataset consisting of positive and negative statements. The positive and negative statements are labeled with trust scores 1 and 0, respectively. An example graph of an input triple in the training set is as follows:
+          </p>
+<pre><code id="code-example" class="language-markdown">
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">type</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">Statement</span>&gt;</span></span> .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">subject</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">dice-research.org</span>/<span class="hljs-attribute">ns</span>/<span class="hljs-attribute">drugbank</span>#<span class="hljs-attribute">drug-DB00001</span>&gt;</span></span> .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">predicate</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">dice-research.org</span>/<span class="hljs-attribute">ontology</span>/<span class="hljs-attribute">drugbank</span>/<span class="hljs-attribute">interactsWith</span>&gt;</span></span> .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">object</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">dice-research.org</span>/<span class="hljs-attribute">ns</span>/<span class="hljs-attribute">drugbank</span>#<span class="hljs-attribute">drug-DB09075</span>&gt;</span></span> .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">dice-research.org</span>/<span class="hljs-attribute">ns</span>/<span class="hljs-attribute">drugbank</span>#<span class="hljs-attribute">drug-DB00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">label</span>&gt;</span></span> "Lepirudin"@en .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">dice-research.org</span>/<span class="hljs-attribute">ns</span>/<span class="hljs-attribute">drugbank</span>#<span class="hljs-attribute">drug-DB09075</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">1999</span>/<span class="hljs-attribute">02</span>/<span class="hljs-attribute">22-rdf-syntax-ns</span>#<span class="hljs-attribute">label</span>&gt;</span></span> "Edoxaban"@en .
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;</span></span> "0.0"^^&lt;<span class="xml"><span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">2001</span>/<span class="hljs-attribute">XMLSchema</span>#<span class="hljs-attribute">double</span>&gt;</span></span> .
+            </code></pre>
+
+<p class="card-text text-justify"> Note that, the statements in the training set are labeled with trust scores 0 or 1 using the property &lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;. It is up to the participants to further split the training set into training and validation sets accordingly. The following properties will be used in scoring the challenge:</p>
+<ul class="text-left">
+  <li>http://dice-research.org/ontology/drugbank/interactsWith</li>
+  <li>http://dice-research.org/ontology/drugbank/hasCommonIndication</li>
+  <li>http://dice-research.org/ontology/drugbank/hasSameState</li>
+  <li>http://dice-research.org/ontology/drugbank/hasIndication</li>
+  <li>http://dice-research.org/ontology/drugbank/hasCommonProducer</li>
+</ul>
+<p class="card-text text-justify">
+    The domain and range information and the descriptions of the above mentioned properties will be made available with the training set.
+    </p>
+  <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task Two: Fact Validation at Scale</h6>
+  <p class="card-text text-justify">
+  For the second task, the participants must ensure that their systems are scalable to handle large amount of input. The systems must be as fast as possible. The participants are expected to provide their implementations encapsulated in a docker container. Additionally, the system methods must me wrapped in a System Adapter. Detailed instructions on integrating the system can be found <a href="https://hobbit-project.github.io/system_integration.html" class="font-weight-bold" style="text-decoration:underline">here</a>.
+  </p>
+        </div>
+      </div>
+
+      <div class="card p-1">
+        <div class="card-body">
+          <h4 class="lead card-title text-left"><i class="fa fa-chart-bar fa-lg" style="margin-right:8px" aria-hidden="true"></i>Evaluation</h4>
+          <h6 class="text-left"><a id="Task_One_Attribute_prediction"></a>Task One: Fact Validation</h6>
+          <p class="card-text text-left">
+              For solution scoring, the test dataset containing positive and negative statements will be provided to the participants. The test inputs contains similar statements like the training input (refer <a href="#code-example" class="font-weight-bold" style="text-decoration:underline">example</a>), except the statement that indicate the trust score, which are only known to the dataset owners. The participants are expected to provide a file containing triple statements of scores, one for each input. For example, a system could return </p>
+          <pre><code class="language-markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">task</span>/<span class="hljs-attribute">dataset</span>/<span class="hljs-attribute">s-00001</span>&gt;</span></span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">http:</span>//<span class="hljs-attribute">swc2019.dice-research.org</span>/<span class="hljs-attribute">hasTruthValue</span>&gt;</span></span> "0.0"^^&lt;<span class="xml"><span class="hljs-title">http:</span>//<span class="hljs-attribute">www.w3.org</span>/<span class="hljs-attribute">2001</span>/<span class="hljs-attribute">XMLSchema</span>#<span class="hljs-attribute">double</span>&gt;</span></span> .</code></pre>
+
+          <p class="card-text text-justify">The solutions will be scored by using the area under the ROC curve (AUC).</p>
+        </div>
+      </div>
+
+      <div class="card p-1">
+        <div class="card-body">
+          <h5 class="lead card-title text-left"><i class="fas fa-cogs fa-lg" style="margin-right:8px" aria-hidden="true"></i>Submission</h5>
+          <p class="card-text text-left">The participants can submit their system results via <a href="http://swc2017.aksw.org/gerbil/config" class="font-weight-bold" style="text-decoration:underline">Gerbil</a>. Note that, only submissions published to the leaderboard will be accepted as to the competition.
+          </p>
+        </div>
+      </div>
+
+      <div class="card p-1">
+          <div class="card-body">
+            <h5 class="lead card-title text-left"><i class="far fa-calendar-alt fa-lg" style="margin-right:8px"
+                aria-hidden="true"></i>Timeline</h5>
+            <p class="card-text text-left"> The following timelines must be observed both by the organizers and participants of the challenge: </p>
+            <p class="card-text text-left">
+              <strong>March 15, 2019 :</strong> Release of Dataset, competition begins. <br>
+              <strong>June 15, 2019 :</strong> Submission of Systems. <br>
+              <strong>July 08, 2019 :</strong> System Results and Notification of Acceptance <br>
+              <strong>October 30, 2019 :</strong> Challenge Presentation <br>
+            </p>
+          </div>
+        </div>
+
+      <div class="card p-1">
+          <div class="card-body">
+            <h5 class="lead card-title text-left"><i class="fa fa-gift fa-lg" style="margin-right:8px" aria-hidden="true"></i>Prize</h5>
+            <p class="card-text text-left">The winning team of each task will receive 1000€. The sum will be shared amongst the winning teams if several teams are declared the winners.
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-1">
+            <div class="card-body">
+              <h5 class="lead card-title text-left"><i class="fas fa-film fa-lg" style="margin-right:8px" aria-hidden="true"></i>Presentation</h5>
+              <p class="card-text text-left">Winning team for each task will be invited to present their implementation at the conference. Any submitting team may also provide posters for display at the conference accompanied by 3-4 page papers. The challenge committee is working to have these collected in special proceedings.
+              </p>
+            </div>
+          </div>
+    </div>
+
+    
+    <!--End of cards-->
+
+  <div id="organizational">
+    <p>Organizers:</p>
+    <div class="container">
+      <div id="persons">
+        <div class="person col-lg-2 col-sm-3 col-xs-12">
+          <div class="person-info">
+              <a href="https://dice.cs.uni-paderborn.de/team/profiles/ngonga/" style="text-decoration:none" target="_blank" class="lead">
+            <p class="person-name">Prof. Dr. Axel-Cyrille Ngonga Ngomo</p>
+            <p class="affiliation">Paderborn University</p></a>
+          </div>
+        </div>
+        <div class="person col-lg-2 col-sm-3 col-xs-12">
+          <div class="person-info">
+              <a href="https://dice.cs.uni-paderborn.de/team/profiles/roeder/" style="text-decoration:none" target="_blank" class="lead">
+            <p class="person-name">Michael R&ouml;der</p>
+            <p class="affiliation">Paderborn University</p></a>
+          </div>
+        </div>
+        <div class="person col-lg-2 col-sm-3 col-xs-12">
+          <div class="person-info">
+              <a href="https://dice.cs.uni-paderborn.de/team/profiles/syed/" style="text-decoration:none" target="_blank" class="lead">
+            <p class="person-name">Zafar Habeeb Syed</p>
+            <p class="affiliation">Paderborn University</p></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div id="logos" class="justify-content-center">
+      <a href="https://iswc2019.semanticweb.org//"  style="text-decoration:none" target="_blank" class="lead font-weight-bold"><img src="img/iswc-2019-logo.png" width="120" height="45" alt=""></a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a href="https://dice.cs.uni-paderborn.de/about/" style="text-decoration:none" target="_blank" class="lead"><img src="img/dice-upb-logo.png" width="160" height="30" alt=""></a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <a href="https://www.uni-paderborn.de/en/university/" style="text-decoration:none" target="_blank" class="lead"><img src="img/upb-logo.png" width="100" height="40" alt=""></a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+    </div>
+    
+  </div>
+</div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('.jumbotron').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    })
+  </script>
+</body>
+
+</html>
