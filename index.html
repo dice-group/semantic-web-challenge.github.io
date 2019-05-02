@@ -176,7 +176,7 @@ height: 110px;
           <h5 class="lead card-title text-left text-bold"><i class="far fa-hand-point-right fa-lg" style="margin-right:8px" aria-hidden="true"></i>In a nutshell</h5>
           <table class="table table-striped table-sm">
             <tbody><tr><th><a href="#tasks" style="text-decoration:underline">Tasks</a></th><th>Task 1 &ndash; Fact Validation</th><th>Task 2 &ndash; Fact Validation at Scale</th></tr>
-            <tr><td>Evaluation</td>
+            <tr><td><a href="#eval" style="text-decoration:underline">Evaluation</a></td>
               <td><a href="http://swc2017.aksw.org/gerbil/config" style="text-decoration:underline">Gerbil</a></td>
               <td><a href="https://master.project-hobbit.eu/" style="text-decoration:underline">HOBBIT</a></td></tr>
             <tr><td><a href="#train" style="text-decoration:underline">Training data</a></td><td colspan="2"><a href="https://hobbitdata.informatik.uni-leipzig.de/SWC_ISWC2019/" style="text-decoration:underline">25k positive and negative examples</a></td></tr>
@@ -262,7 +262,7 @@ height: 110px;
       </div>
       <div class="card p-1 border-0">
         <div class="card-body">
-          <h4 class="lead card-title text-left"><i class="fa fa-chart-bar fa-lg" style="margin-right:8px" aria-hidden="true"></i>Evaluation</h4>
+          <h4 class="lead card-title text-left" id="eval"><i class="fa fa-chart-bar fa-lg" style="margin-right:8px" aria-hidden="true"></i>Evaluation</h4>
           <h6 class="text-left">Task One: Fact Validation</h6>
           <p class="card-text text-left">
               For solution scoring, the test dataset containing positive and negative statements will be provided to the participants. The test inputs contains similar statements like the training input (refer <a href="#code-example" class="font-weight-bold" style="text-decoration:underline">example</a>), except the statement that indicate the trust score, which are only known to the dataset owners. The participants are expected to provide a file containing triple statements of scores, one for each input. For example, a system could return </p>
